@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1> Jogo de Adivinhação </h1>
+    <div th:each="erro : ${erros}">
+        <span th:text="${erro}"></span>
+    </div>
+    <form method="POST">
+        Nome: <input type="text" name="nome">
+        Numero da Sorte: <input type="number" name="numeroDaSorte">
+        <button type="submit"> Jogar </button>
+    </form>
+ 
+</body>
+</html>
